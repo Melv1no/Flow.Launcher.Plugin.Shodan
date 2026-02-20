@@ -75,9 +75,6 @@ Voici quelques filtres utiles :
 - `product:"Apache"` - Produit/service
 - `vuln:CVE-2014-0160` - Vulnérabilité spécifique
 
-## 📝 Licence
-
-MIT License
 
 ## 🔗 Liens utiles
 
