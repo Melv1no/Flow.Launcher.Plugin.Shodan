@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "MBNGRLTu3+c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\molivet\\t\\Flow.Launcher.Plugin.Shodan\\Flow.Launcher.Plugin.Shodan\\Flow.Launcher.Plugin.Shodan.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\molivet\\.nuget\\packages\\flow.launcher.plugin\\4.4.0\\flow.launcher.plugin.4.4.0.nupkg.sha512",
+    "C:\\Users\\molivet\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\molivet\\.nuget\\packages\\jetbrains.annotations\\2024.2.0\\jetbrains.annotations.2024.2.0.nupkg.sha512",
+    "C:\\Users\\molivet\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

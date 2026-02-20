@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="flowlauncher_plugin_shodan_plugin_name">Shodan</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_plugin_description">Interact with the Shodan API</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_shodan_unknown_command_title">Unknown command</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_unknown_command_subtitle">Type 'help' to see all available commands</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_error_title">Error</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_shodan_help_host_title">host &lt;ip&gt; - Information about an IP</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_host_subtitle">Ex: host 8.8.8.8</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_search_title">search &lt;query&gt; - Search devices</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_search_subtitle">Ex: search apache country:FR</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_dns_title">dns &lt;hostname&gt; - Resolve a domain</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_dns_subtitle">Ex: dns google.com</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_reverse_title">reverse &lt;ip&gt; - Reverse DNS</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_reverse_subtitle">Ex: reverse 8.8.8.8</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_myip_title">myip - Your public IP</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_myip_subtitle">Get your public IP address</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_info_title">info - Your account info</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_help_info_subtitle">Show your Shodan credits</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_shodan_search_found_title">{0:N0} results found</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_search_found_subtitle">Showing first 10 for: {0}</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_info_title">Plan: {0}</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_info_subtitle">Search credits: {0} | Scan credits: {1}</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_info_clipboard">Plan: {0}, Query: {1}, Scan: {2}</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_myip_title">Your IP: {0}</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_click_to_copy">Click to copy</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_click_to_copy_ip">Click to copy the IP</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_click_to_copy_hostname">Click to copy the hostname</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_press_enter_open_host">Press Enter to open on Shodan</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_ip_copied_title">IP copied</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_ip_copied_subtitle">{0} copied to clipboard</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_hostname_copied_title">Hostname copied</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_hostname_copied_subtitle">{0} copied to clipboard</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_shodan_config_missing_title">Shodan API key not configured</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_config_missing_subtitle">Please configure your API key in plugin settings</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_org_unknown">Unknown organization</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_unknown">Unknown</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_location_unknown">Unknown location</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_host_subtitle">Location: {0}, {1} | OS: {2} | Ports: {3}</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_none">None</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_org">Organization</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_isp">ISP</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_asn">ASN</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_location">Location</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_ports">Open ports</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_hostname">Hostname</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_vulns">Vulnerabilities</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_tags">Tags</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_field_last_update">Last update</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_shodan_settings_title">Shodan API Settings</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_settings_api_key">API Key:</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_settings_api_key_hint">Get your API key from: https://account.shodan.io/</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_settings_save">Save</system:String>
+    <system:String x:Key="flowlauncher_plugin_shodan_settings_saved">Settings saved successfully!</system:String>
+
+</ResourceDictionary>
