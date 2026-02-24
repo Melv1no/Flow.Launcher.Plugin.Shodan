@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [ master ]
-    paths-ignore: 
+    paths-ignore:
       - .github/workflows/*
       - '**/README.md'
 
@@ -14,36 +14,36 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3 
-      
+      - uses: actions/checkout@v3
+
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3  
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 5.0.x  
-          
+          dotnet-version: 5.0.x
+
       - name: get version
         id: version
         uses: notiz-dev/github-action-json-property@release
-        with: 
+        with:
           path: 'Flow.Launcher.Plugin.Shodan/plugin.json'
           prop_path: 'Version'
-          
+
       - name: Display version
-        run: echo "Version: v${{steps.version.outputs.prop}}"
-        
+        run: echo "Version: v${{ steps.version.outputs.prop }}"
+
       - name: Build
         run: |
           dotnet publish 'Flow.Launcher.Plugin.Shodan/Flow.Launcher.Plugin.Shodan.csproj' --framework net5.0-windows -c Release -o "publish/Flow.Launcher.Plugin.Shodan"
           cd publish
           7z a -tzip "../Flow.Launcher.Plugin.Shodan.zip" "./Flow.Launcher.Plugin.Shodan/*"
           cd ..
-          
+
       - name: Create Release
-        uses: ncipollo/release-action@v1 
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "Flow.Launcher.Plugin.Shodan.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "v${{steps.version.outputs.prop}}"
-          name: "Release v${{steps.version.outputs.prop}}"
-          body: "Automated release for version v${{steps.version.outputs.prop}}"
+          tag: "v${{ steps.version.outputs.prop }}"
+          name: "Release v${{ steps.version.outputs.prop }}"
+          body: "Automated release for version v${{ steps.version.outputs.prop }}"
           allowUpdates: true
