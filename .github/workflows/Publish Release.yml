@@ -46,4 +46,4 @@ jobs:
           tag: "v${{steps.version.outputs.prop}}"
           name: "Release v${{steps.version.outputs.prop}}"
           body: "Automated release for version v${{steps.version.outputs.prop}}"
-          allowUpdates: true 
+          allowUpdates: true
