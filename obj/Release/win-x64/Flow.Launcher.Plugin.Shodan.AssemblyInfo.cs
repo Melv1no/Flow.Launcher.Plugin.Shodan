@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Melv1no")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7efd5e4c4e600398d4f5985a996404ae33cb3c4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flow.Launcher.Plugin.Shodan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flow.Launcher.Plugin.Shodan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
