@@ -1,0 +1,38 @@
+name: Publish Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths-ignore: 
+      - .github/workflows/*
+      - '**/README.md'
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: get version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with: 
+          path: 'plugin.json'
+          prop_path: 'Version'
+      - run: echo ${{steps.version.outputs.prop}} 
+      - name: Build
+        run: |
+          dotnet publish 'Flow.Launcher.Plugin.Shodan.csproj' --framework net5.0-windows  -c Release -o "Flow.Launcher.Plugin.Shodan"
+          7z a -tzip "Flow.Launcher.Plugin.Shodan.zip" "./Flow.Launcher.Plugin.Shodan/*"
+          rm -r "Flow.Launcher.Plugin.Shodan"
+      - name: Publish
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "Flow.Launcher.Plugin.Shodan.zip"
+          tag_name: "v${{steps.version.outputs.prop}}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
